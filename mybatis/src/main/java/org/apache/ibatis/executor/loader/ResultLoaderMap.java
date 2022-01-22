@@ -42,6 +42,8 @@ import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 
 /**
+ * 设置懒加载对象的返回值，用LoadPair填充，最终通过ResultLoader加载
+ *
  * @author Clinton Begin
  * @author Franta Mejta
  */

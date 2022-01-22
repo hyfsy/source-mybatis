@@ -102,8 +102,11 @@ public class XMLConfigBuilder extends BaseBuilder {
   private void parseConfiguration(XNode root) {
     try {
       //issue #117 read properties first
+      // 缓存属性配置
       propertiesElement(root.evalNode("properties"));
+      // setting配置，Configuration对象的setter配置
       Properties settings = settingsAsProperties(root.evalNode("settings"));
+      // setter设置Configuration的各种属性
       loadCustomVfs(settings);
       loadCustomLogImpl(settings);
       typeAliasesElement(root.evalNode("typeAliases"));
@@ -111,6 +114,7 @@ public class XMLConfigBuilder extends BaseBuilder {
       objectFactoryElement(root.evalNode("objectFactory"));
       objectWrapperFactoryElement(root.evalNode("objectWrapperFactory"));
       reflectorFactoryElement(root.evalNode("reflectorFactory"));
+      // setter设置Configuration的各种属性
       settingsElement(settings);
       // read it after objectFactory and objectWrapperFactory issue #631
       environmentsElement(root.evalNode("environments"));

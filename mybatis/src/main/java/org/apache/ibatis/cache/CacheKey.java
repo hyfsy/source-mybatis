@@ -20,10 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
 
+import org.apache.ibatis.executor.BaseExecutor;
 import org.apache.ibatis.reflection.ArrayUtil;
 
 /**
  * @author Clinton Begin
+ * @see BaseExecutor#createCacheKey
  */
 public class CacheKey implements Cloneable, Serializable {
 

@@ -54,8 +54,11 @@ public abstract class BaseExecutor implements Executor {
   protected Transaction transaction;
   protected Executor wrapper;
 
+  // 延迟加载的属性值
   protected ConcurrentLinkedQueue<DeferredLoad> deferredLoads;
+  // 一级缓存，会话级别
   protected PerpetualCache localCache;
+  // 存储过程相关的输出参数缓存
   protected PerpetualCache localOutputParameterCache;
   protected Configuration configuration;
 

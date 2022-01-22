@@ -27,6 +27,10 @@ import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.RowBounds;
 
 /**
+ * 查询出指定的key，然后放到对象内部
+ *
+ * 在sql执行前后处理
+ *
  * @author Clinton Begin
  * @author Jeff Butler
  */

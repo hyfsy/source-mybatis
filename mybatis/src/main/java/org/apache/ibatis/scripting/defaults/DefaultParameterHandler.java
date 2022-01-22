@@ -33,6 +33,8 @@ import org.apache.ibatis.type.TypeHandler;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 
 /**
+ * sql语句添加参数
+ *
  * @author Clinton Begin
  * @author Eduardo Macarron
  */

@@ -39,6 +39,8 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 
 /**
+ * 直接代理对象的方法，基于注解和接口创建的代理对象
+ *
  * @author Clinton Begin
  * @author Eduardo Macarron
  * @author Lasse Voss

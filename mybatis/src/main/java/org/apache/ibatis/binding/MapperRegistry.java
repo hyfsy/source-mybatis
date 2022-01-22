@@ -27,6 +27,8 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 
 /**
+ * 所有的Mapper接口数据都放在该注册器，通过内部的代理工厂获取具体实现
+ *
  * @author Clinton Begin
  * @author Eduardo Macarron
  * @author Lasse Voss

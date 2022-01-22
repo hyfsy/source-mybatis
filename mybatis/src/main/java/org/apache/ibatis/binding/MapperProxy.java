@@ -30,6 +30,8 @@ import org.apache.ibatis.reflection.ExceptionUtil;
 import org.apache.ibatis.session.SqlSession;
 
 /**
+ * Mapper接口的代理对象
+ *
  * @author Clinton Begin
  * @author Eduardo Macarron
  */

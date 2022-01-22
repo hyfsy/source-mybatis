@@ -33,6 +33,10 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.transaction.Transaction;
 
 /**
+ * 提供二级缓存支持，所有会话共享，namespace级别，基于 {@link MappedStatement#getCache()}
+ *
+ * 流程：二级缓存 -> 一级缓存 -> 数据库
+ *
  * @author Clinton Begin
  * @author Eduardo Macarron
  */

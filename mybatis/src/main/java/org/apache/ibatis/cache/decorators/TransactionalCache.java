@@ -111,6 +111,7 @@ public class TransactionalCache implements Cache {
     entriesMissedInCache.clear();
   }
 
+  // 添加事务产生的缓存到二级缓存中
   private void flushPendingEntries() {
     for (Map.Entry<Object, Object> entry : entriesToAddOnCommit.entrySet()) {
       delegate.putObject(entry.getKey(), entry.getValue());
@@ -122,6 +123,7 @@ public class TransactionalCache implements Cache {
     }
   }
 
+  // 移除二级缓存中不存在的值
   private void unlockMissedEntries() {
     for (Object entry : entriesMissedInCache) {
       try {
